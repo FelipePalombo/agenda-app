@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
 import "antd/dist/antd.css";
-import { Layout } from 'antd';
-
-const FooterAntd = Layout
+import { Row } from 'antd';
 
 class Footer extends Component {
     render(){
         return(
-            <FooterAntd style={{ textAlign: 'center', minHeight: 400 }}>
+            <Row align="middle" type="flex" justify="center" style={{ minHeight: 50 }}>
                 Felipe Palombo ©2019
-            </FooterAntd>                            
+            </Row>                            
         );
     }
 }

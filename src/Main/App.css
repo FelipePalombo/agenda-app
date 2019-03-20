@@ -1,0 +1,8 @@
+.App {
+  text-align: center;
+}
+
+.App-Logo{
+  background-image: url("todologo.png");
+  width: 10px;
+}
