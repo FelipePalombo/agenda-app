@@ -6,16 +6,7 @@ class Nav extends Component {
     render() {        
       return (
         <Layout>
-          <Menu
-              theme="light"
-              mode="horizontal"
-              defaultSelectedKeys={['3']}
-              style={{ lineHeight: '64px' }}
-          >
-            <Menu.Item key="0"><img src="../Main/todologo.png"/>&nbsp;&nbsp;Agenda</Menu.Item>
-            <Menu.Item key="1"><a onClick={() => this.props.action('Tarefas')}>Tarefas</a></Menu.Item>
-            <Menu.Item key="2"><a onClick={() => this.props.action('Sobre')}>Sobre</a></Menu.Item>
-          </Menu>
+          
         </Layout>
       );
     }
