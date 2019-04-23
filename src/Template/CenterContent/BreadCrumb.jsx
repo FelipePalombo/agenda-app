@@ -5,7 +5,7 @@ class BreadCrumb extends Component {
         return(
             <Breadcrumb style={{ margin: '16px 0', width: 100}}>
                 <Breadcrumb.Item>Home</Breadcrumb.Item>
-                <Breadcrumb.Item>{this.props.pagina}</Breadcrumb.Item>
+                <Breadcrumb.Item>{this.props.caminho}</Breadcrumb.Item>
             </Breadcrumb>
         )
     }
