@@ -26,7 +26,7 @@ export default class TodoList extends Component {
                         header={<div>Tarefas</div>}
                         bordered
                         dataSource={this.props.lista}
-                        renderItem={item => (<List.Item>{item}</List.Item>)}                
+                        renderItem={item => (<List.Item>{item}</List.Item>)}            
 
                     />
                 </Col>

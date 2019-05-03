@@ -24,10 +24,15 @@ class TodoAForm extends Component{
         console.log(this.state.tarefa);        
     }
 
-    handleAdding(){
-        console.log(this.state.tarefa);    
-        //this.props.handleAdd(this.state.tarefa);
-        //this.props.handleAdd('aaa');
+    handleClick(action){
+        if(action === 'add'){
+            console.log('handleAdding: '+this.state.tarefa);    
+            this.props.handleAdd(this.state.tarefa);
+            this.setState({tarefa : ''});
+            //this.props.handleAdd('aaa');
+        }else if(action === 'removeAll'){
+            
+        }   
     }
 
     render(){      
@@ -41,6 +46,7 @@ class TodoAForm extends Component{
                                 prefix={<Icon type="book" style={{ color: 'rgba(0,0,0,.25)'}} />} 
                                 type="text" placeholder="Nova tarefa" 
                                 onChange={evt => this.handleInput(evt)}
+                                value={this.state.tarefa}
                                 />
                         </Form.Item>
                         <Form.Item>
@@ -50,7 +56,18 @@ class TodoAForm extends Component{
                                 icon="plus"
                                 shape="circle"
                                 size="large"
-                                onClick={() => this.handleAdding()}
+                                onClick={() => this.handleClick('add')}
+                            >
+                            </Button>
+                        </Form.Item>
+                        <Form.Item>
+                            <Button
+                                type="warning"
+                                htmlType="submit"
+                                icon="delete"
+                                shape="circle"
+                                size="large"
+                                onClick={() => this.handleClick('removeAll')}
                             >
                             </Button>
                         </Form.Item>
