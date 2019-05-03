@@ -17,7 +17,7 @@ class Tarefas extends Component{
         this.handleAdd = this.handleAdd.bind(this);        
     }
 
-    handleAdd(tarefa){
+    handleAdd = tarefa => {
         console.log('handleAdd: ' + tarefa);
         this.setState(state => {
             const tarefas = state.tarefas.push(tarefa);
@@ -26,6 +26,12 @@ class Tarefas extends Component{
             };
         });
     }
+
+    handleRemoveAll = () => {
+        this.setState({tarefas: []});
+    }
+
+    handleAll = {removeAll: this.handleRemoveAll, addTarefa: this.handleAdd,};
 
     render(){
         return(
@@ -39,7 +45,7 @@ class Tarefas extends Component{
                             <Title>Tarefas</Title>
                         </Row>
                         <Row style={{marginTop:'20px'}}>
-                            <TodoForm type="flex" justify="center" align="middle" handleAdd={this.handleAdd} />
+                            <TodoForm type="flex" justify="center" align="middle" handleAll={this.handleAll} />
                         </Row>    
                         <Row style={{marginTop:'20px'}}>
                             <TodoList lista={this.state.tarefas} type="flex" justify="center" align="middle" />

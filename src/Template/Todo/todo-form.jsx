@@ -27,11 +27,11 @@ class TodoAForm extends Component{
     handleClick(action){
         if(action === 'add'){
             console.log('handleAdding: '+this.state.tarefa);    
-            this.props.handleAdd(this.state.tarefa);
+            this.props.handleAll.addTarefa(this.state.tarefa);
             this.setState({tarefa : ''});
             //this.props.handleAdd('aaa');
         }else if(action === 'removeAll'){
-            
+            this.props.handleAll.removeAll();
         }   
     }
 
